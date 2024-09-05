@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sidebar img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .content {
+            width: 70%;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="sidebar">
+        <img src="Senyi.jpg" alt="Profile Picture">
+        <h1>Senyi Zhang</h1>
+        <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
+        <a href="mailto:asengo031619[at]gmail[dot]com">Contact Me</a>
+    </div>
+
+    <div class="content">
+        <h2>Biography</h2>
+        <p>Hi, I'm a third-year undergraduate at the School of Computer Science and Engineering, Sun Yat-sen University. I work with Zhi Zhou and collaborate with Jordan Boyd-Graber from the University of Maryland, College Park. My research interests are broadly in Human-interactable NLP and ML system.</p>
+
+        <h2>My Recent Project</h2>
+        <p>We are currently designing an AI participant for the 'Um, Actually' web show...</p>
+    </div>
+
 </body>
 </html>
