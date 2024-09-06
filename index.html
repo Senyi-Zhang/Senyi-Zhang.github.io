@@ -4,140 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-
     <title>Personal Website</title>
     <style>
-        html {
-    font-size: 16px; /* 明确设置基准字体大小 */
-}
 
+        /* 设置全局样式 */
         body {
+            font-size: 1rem;
             font-family: Raleway, sans-serif;
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh; /* 页面最小高度为视口高度 */
             margin: 0;
         }
 
-        @media (min-width: 768px) {
-            body {
-                flex-direction: row;
-            }
+        .content {
+            flex-grow: 1; /* 主体内容占据页面的剩余空间 */
+            padding: 20px;
         }
 
-        .top-nav {
-            position: absolute;
-            top: 0%;
-            left: 35%; /* 将导航栏居中 */
-            transform: translateX(-50%);
-            background-color: white;
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
             padding: 10px;
-            z-index: 1000; /* 确保导航栏在其他元素之上 */
-            font-size: 1.5rem;
-            color: black;
-        }
-
-        .top-nav a {
-            text-decoration: none; /* 移除超链接的下划线 */
-            color: #333; /* 设置字体颜色 */
-        }
-
-        .top-nav a:hover {
-            color: #007BFF; /* 鼠标悬停时改变颜色 */
+            font-size: 0.9rem;
         }
 
         .sidebar {
-    position: fixed; /* 固定边栏位置 */
-    left: 0; /* 固定在屏幕左侧 */
-    top: 0; /* 从屏幕顶部开始 */
-    background-image: url('default-sidebar.jpg'); /* 使用你图片的路径 */
-    background-size: cover; /* 确保图片覆盖整个sidebar */
-    background-position: center; /* 确保图片居中显示 */
-    color: white; /* 调整文字颜色与背景对比 */
-    width: 20%;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-}
-        .social-icons {
-    margin-top: 15%; /* 图片距离上方内容的间距 */
-    display: flex;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-image: url('default-sidebar.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            width: 25%;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1%;
+        }
 
-    gap: 5%; /* 图片之间的间距 */
-}
+        .social-icons {
+            margin-top: 15%;
+            display: flex;
+            gap: 5%;
+        }
 
         .social-icons img {
-    width: 5%; /* 图片相对于父容器边栏的宽度 */
-    height: auto;
-    border-radius: 50%; /* 圆形图片 */
-}
-
-        @media (min-width: 768px) {
-            .sidebar {
-                width: 30%;
-                height: 100vh;
-            }
+            width: 5%;
+            height: auto;
+            border-radius: 50%;
         }
 
         .sidebar img {
             border-radius: 50%;
             width: 50%;
-            max-width: 150px; /* 确保图片最大宽度为150px */
+            max-width: 150px;
             height: auto;
             margin-top: 25%;
             margin-bottom: 20%;
         }
 
-
-
-        .content {
-            padding: 40px;
-            flex-grow: 1;
+        .top-nav {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 10px;
+            z-index: 1000;
+            font-size: 1.5rem;
+            color: black;
+            display: flex;
+            gap: 100px;
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
+        .top-nav a {
+            text-decoration: none;
+            color: #333;
         }
 
-        p {
-            font-size: 1.2em;
+        .top-nav a:hover {
+            color: #007BFF;
         }
     </style>
 </head>
 <body>
 
-
-
+    <!-- 侧边栏 -->
     <div class="sidebar">
         <img src="Senyi.jpg" alt="Profile Picture">
         <h1>Senyi Zhang</h1>
         <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
         <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white">aseng031619 [at] gmail [dot] com</a>
         <div class="social-icons">
-        <a href="https://github.com/your-profile" target="_blank">
-            <img src="twitter.png" alt="GitHub">
-        </a>
-        <a href="https://twitter.com/your-profile" target="_blank">
-            <img src="icons8-github-96.png" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank">
-            <img src="twitter.png" alt="LinkedIn">
-        </a>
-    </div>
+            <a href="https://x.com/TiphaPo66461" target="_blank">
+                <img src="icons8-x-100.png" alt="X">
+            </a>
+            <a href="https://github.com/Senyi-Zhang" target="_blank">
+                <img src="icons8-github-100.png" alt="Github">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565544955776" target="_blank">
+                <img src="icons8-facebook-100.png" alt="Facebook">
+            </a>
+        </div>
     </div>
 
+    <!-- 顶部导航 -->
     <div class="top-nav">
         <a href="index.html">Home</a>
+        <a>|</a>
+        <a href="about.html">About</a>
+        <a>|</a>
+        <a href="posts.html">Posts</a>
     </div>
 
+    <!-- 页面内容 -->
+    <div class="content">
 
+    </div>
 
-
+    <!-- 底部版权栏 -->
+    <div class="footer">
+        © 2024 Senyi Zhang. All rights reserved.
+    </div>
 
 </body>
 </html>
