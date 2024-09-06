@@ -83,7 +83,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            background-image: url('default-sidebar.jpg');
+            background-image: url('images/default-sidebar.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -121,17 +121,19 @@
         .top-nav {
             position: fixed;
             top: 0;
-            left: 62.5%;
-            transform: translateX(-50%);
+            left: 27%; /* 从页面最左边开始 */
+            width: 73%; /* 占满整个页面宽度 */
             background-color: white;
-            padding: 10px;
+
             z-index: 1000;
             font-size: 1.5rem;
             color: black;
             display: flex;
-            gap: 100px;
-            margin-bottom: 500px;
+            justify-content: center; /* 居中对齐内部内容 */
+            gap: 6vw;
+
         }
+
 
         .top-nav a {
             text-decoration: none;
@@ -167,8 +169,8 @@
             color: #333;
             font-size: 1em;
             text-align: left;
-            margin-left: 20px;
-            max-width: 100%;
+            margin-left: 16px;
+            max-width: 72%;
         }
 
         .education-item .text strong {
@@ -181,7 +183,7 @@
 
         /* 手机布局的媒体查询 */
         @media (max-width: 768px) {
-            /* 将侧边栏移到顶部并占满整个宽度 */
+
             .sidebar {
                 position: relative;
                 width: 100%;
@@ -201,21 +203,21 @@
             margin-bottom: 5vh;
             }
 
-            /* 将内容移到侧边栏下方 */
+
             .content {
                 margin-left: 0;
                 padding: 10px;
-                margin-top: -120%;
+                margin-top: -130%;
             }
 
-            /* 将标题和段落调整为全宽 */
+
             .content h2, .content p {
                 max-width: 100%;
                 margin-left: 0;
                 text-align: justify;
             }
 
-            /* 调整社交图标大小 */
+
             .social-icons img {
                 width: 40px;
                 height: 40px;
@@ -224,7 +226,7 @@
                 margin-top: 0;
             }
 
-            /* 教育经历部分全宽显示 */
+
             .education-section {
                 margin-left: 0;
                 max-width: 100%;
@@ -232,6 +234,15 @@
 
             .education-item img {
                 width: 80px;
+            }
+
+            .education-item .text {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 1em;
+            text-align: left;
+            margin-left: 20px;
+            max-width: 100%;
             }
 
             .top-nav {
@@ -242,7 +253,7 @@
                 left: 0;
                 transform: none;
                 margin-top: 5px;
-                background-color: white; /* 确保背景颜色在导航栏固定时依旧可见 */
+                background-color: white;
                 z-index: 1000;
             }
 
@@ -251,6 +262,22 @@
                 padding-left: 0;
                 width: 100%;
             }
+
+            li{
+                text-align: center;
+            }
+
+            .award {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 0;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: center;
+            max-width: 100%;
+            font-family: Arial, sans-serif;
+        }
         }
 
     </style>
@@ -259,19 +286,19 @@
 
     <!-- sidebar -->
     <div class="sidebar">
-        <img src="Senyi.jpg" alt="Profile Picture">
+        <img src="images/Senyi.jpg" alt="Profile Picture">
         <h1>Senyi Zhang</h1>
         <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
         <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white; border-bottom: none">aseng031619 [at] gmail [dot] com</a>
         <div class="social-icons">
             <a href="https://x.com/TiphaPo66461" style="border-bottom: none" target="_blank">
-                <img src="icons8-x-100.png" alt="X">
+                <img src="images/icons8-x-100.png" alt="X">
             </a>
             <a href="https://github.com/Senyi-Zhang" style="border-bottom: none" target="_blank">
-                <img src="icons8-github-100.png" alt="Github">
+                <img src="images/icons8-github-100.png" alt="Github">
             </a>
             <a href="https://www.facebook.com/profile.php?id=61565544955776" style="border-bottom: none" target="_blank">
-                <img src="icons8-facebook-100.png" alt="Facebook">
+                <img src="images/icons8-facebook-100.png" alt="Facebook">
             </a>
         </div>
     </div>
@@ -297,15 +324,15 @@
         <h2>Education</h2>
         <div class="education-section">
             <div class="education-item">
-                <img src="sysu.png" alt="Sun Yat-sen University">
+                <img src="images/sysu.png" alt="Sun Yat-sen University">
                 <div class="text">
-                    <p style="margin-left: 0; max-width: 60%"><strong>Sep. 2022 - present</strong>, School of Computer Science and Engineering, <em>Sun Yat-sen University</em>,<br>Bachelor of Engineering.</p>
+                    <p class="text"><strong>Sep. 2022 - present</strong>, School of Computer Science and Engineering, <em>Sun Yat-sen University</em>,<br>Bachelor of Engineering.</p>
                 </div>
             </div>
             <div class="education-item">
-                <img src="umd.jpg" alt="University of Maryland">
+                <img src="images/umd.jpg" alt="University of Maryland">
                 <div class="text">
-                    <p style="margin-left: 0; max-width: 60%"><strong>May. 2024 - present</strong>, Computer Science Department, <em>University of Maryland, College Park</em>,<br>Research Assistant and Visiting Student.</p>
+                    <p class="text"><strong>May. 2024 - present</strong>, Computer Science Department, <em>University of Maryland, College Park</em>,<br>Research Assistant and Visiting Student.</p>
                 </div>
             </div>
         </div>
