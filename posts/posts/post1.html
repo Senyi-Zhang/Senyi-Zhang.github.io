@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Senyi's Personal Website</title>
+    <style>
+
+        /* global design */
+        body {
+            font-size: 16px;
+            font-family: Raleway, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        a, a:visited, a:link {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            border-bottom: #8494a4 1px dashed;
+            padding-bottom: 1px;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+
+        a h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            margin-left: 42%;
+            margin-top: 20px;
+            display: inline; /* 确保 h3 作为内联元素 */
+            color: inherit; /* 确保 h3 颜色继承自父元素 */
+            border-bottom: #8494a4 1px dashed;
+        }
+
+        a h3:hover {
+            color: #007BFF; /* 鼠标悬停时，h3 变为蓝色 */
+            border-bottom: #007BFF 1px dashed; /* 悬停时下方虚线变为蓝色 */
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            color: #112f41;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            margin-left: 42%;
+            margin-top: 20px;
+        }
+
+
+        .content p {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 42%;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: justify;
+            max-width: 43%;
+        }
+
+        .content img {
+            display: block;
+            margin-left: 42%; /* 图片与文字对齐 */
+            margin-bottom: 20px;
+            max-width: 43%; /* 控制图片宽度 */
+            height: auto; /* 保持图片纵横比 */
+            border-radius: 10px; /* 可选：使图片圆角 */
+        }
+
+
+        .award {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 42%;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: justify;
+            max-width: 43%;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            margin-left: 20%;
+            padding-left: 5%;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-image: url('../images/default-sidebar.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            width: 25%;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1%;
+        }
+
+        .social-icons {
+            margin-top: 15%;
+            display: flex;
+            gap: 5%;
+        }
+
+        .social-icons img {
+            width: 5%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .sidebar img {
+            border-radius: 50%;
+            width: 50%;
+            max-width: 150px;
+            height: auto;
+            margin-top: 25%;
+            margin-bottom: 20%;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 27%; /* 从页面最左边开始 */
+            width: 73%; /* 占满整个页面宽度 */
+            background-color: white;
+
+            z-index: 1000;
+            font-size: 1.5rem;
+            color: black;
+            display: flex;
+            justify-content: center; /* 居中对齐内部内容 */
+            gap: 6vw;
+
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .top-nav a:hover {
+            color: #007BFF;
+        }
+
+        /* education design */
+        .education-section {
+            margin-left: 43%;
+            margin-top: 40px;
+            max-width: 100%;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px; /* The spacing between each educational experience entry */
+        }
+
+        .education-item img {
+            margin-left: 0;
+            width: 100px;
+            height: auto;
+            margin-right: 10px; /* The spacing between pictures and texts */
+        }
+
+        .education-item .text {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 1em;
+            text-align: left;
+            margin-left: 20px;
+            max-width: 100%;
+        }
+
+        .education-item .text strong {
+            font-weight: bold;
+        }
+
+        .education-item .text em {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: 80vh;
+                padding: 10px;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                display: none;
+            }
+
+            .sidebar img {
+            border-radius: 50%;
+            width: 50%;
+            max-width: 150px;
+            height: auto;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            }
+
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+                margin-top: 0;
+            }
+
+
+            .content h2, .content p {
+                max-width: 100%;
+                margin-left: 0;
+                text-align: justify;
+            }
+
+
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 0;
+            }
+
+            a h3 {
+            font-size: 24px;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+
+            .education-section {
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            .education-item img {
+                width: 80px;
+                margin-left: 10%;
+            }
+
+            .education-item .text {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 1em;
+            text-align: left;
+            margin-left: 20px;
+            max-width: 100%;
+            }
+
+            .top-nav {
+                position: sticky;
+                top:0;
+                width: 100%;
+                justify-content: center;
+                gap: 8vw;
+                left: 0;
+                transform: none;
+                margin-top: 0;
+                background-color: white;
+                z-index: 1000;
+            }
+
+            .footer {
+                margin-left: 0;
+                padding-left: 0;
+                width: 100%;
+            }
+
+            li{
+                text-align: center;
+            }
+
+            .award {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 0;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: center;
+            max-width: 100%;
+            font-family: Arial, sans-serif;
+            }
+
+            .content img {
+            display: block;
+            margin-left: 0; /* 图片与文字对齐 */
+            margin-bottom: 20px;
+            max-width: 100%; /* 控制图片宽度 */
+
+            height: auto; /* 保持图片纵横比 */
+            border-radius: 10px; /* 可选：使图片圆角 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <img src="../images/Senyi.jpg" alt="Profile Picture">
+        <h1>Senyi Zhang</h1>
+        <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
+        <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white; border-bottom: none">aseng031619 [at] gmail [dot] com</a>
+        <div class="social-icons">
+            <a href="https://x.com/TiphaPo66461" style="border-bottom: none" target="_blank">
+                <img src="../images/icons8-x-100.png" alt="X">
+            </a>
+            <a href="https://github.com/Senyi-Zhang" style="border-bottom: none" target="_blank">
+                <img src="../images/icons8-github-100.png" alt="Github">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565544955776" style="border-bottom: none" target="_blank">
+                <img src="../images/icons8-facebook-100.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+
+    <!-- top-nav -->
+    <div class="top-nav">
+        <a href="../index.html" style="border-bottom: none">Home</a>
+        <a style="border-bottom: none">|</a>
+        <a href="../about.html" style="border-bottom: none">About</a>
+        <a style="border-bottom: none">|</a>
+        <a href="../posts.html" style="border-bottom: none">Posts</a>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <h2 style="margin-top: 5%">Personal webpage built!</h2>
+
+        <p style="color: gray">Published at September 6, 2024, 14:30 CST</p>
+        <p>Summer vacation nearly comes to an end, and I have almost nothing to do until this idea of
+building a personal website came into my mind. Although it's a little bit early cause I
+don't have plentiful experiences at present, anyway I'll need it in future😉.<br><br> So I
+searched for documents early this morning, installed hugo(fantastic tool for website,
+thanks for the work🥰!) and started coding. It seemed that there's unresolvable problem for Hugo
+in my environment, so I decided to build it from the beginning on myself. I completed the work this morning.
+Having my own spaces feels great!
+<br><br>
+I may post something here irregularly...as a way to improve my writing. Hope to have more fantastic
+things on this website!<br><br></p>
+        <p>
+        <a href="../posts.html" style="font-size: 1.1em">Return</a>
+        </p>
+
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        © 2024 Senyi Zhang. All rights reserved.
+    </div>
+
+</body>
+</html>
