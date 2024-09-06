@@ -4,22 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <title>Personal Website</title>
+    <title>Senyi's Personal Website</title>
     <style>
 
-        /* 设置全局样式 */
+        /* global design */
         body {
-            font-size: 1rem;
+            font-size: 16px;
             font-family: Raleway, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* 页面最小高度为视口高度 */
+            min-height: 100vh;
             margin: 0;
         }
 
+        a, a:visited, a:link {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            border-bottom: #8494a4 1px dashed;
+            padding-bottom: 1px;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+
         .content {
-            flex-grow: 1; /* 主体内容占据页面的剩余空间 */
+            flex-grow: 1;
             padding: 20px;
+            color: #112f41;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            margin-left: 42%;
+            margin-top: 40px;
+        }
+
+        .content p {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 42%;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: justify;
+            max-width: 43%;
+        }
+
+        .award {
+            display: block;
+            font-weight: 400;
+            font-size: 1em;
+            margin-left: 42%;
+            margin-bottom: 15px;
+            line-height: 1.7em;
+            text-align: justify;
+            max-width: 43%;
+            font-family: Arial, sans-serif;
         }
 
         .footer {
@@ -28,6 +72,9 @@
             text-align: center;
             padding: 10px;
             font-size: 0.9rem;
+            margin-top: 30px;
+            margin-left: 20%;
+            padding-left: 5%;
         }
 
         .sidebar {
@@ -72,7 +119,7 @@
         .top-nav {
             position: absolute;
             top: 0;
-            left: 50%;
+            left: 62.5%;
             transform: translateX(-50%);
             background-color: white;
             padding: 10px;
@@ -81,6 +128,7 @@
             color: black;
             display: flex;
             gap: 100px;
+            margin-bottom: 500px;
         }
 
         .top-nav a {
@@ -91,44 +139,88 @@
         .top-nav a:hover {
             color: #007BFF;
         }
+
+        /* education design */
+        .education-section {
+            margin-left: 43%;
+            margin-top: 40px;
+            max-width: 100%;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px; /* The spacing between each educational experience entry */
+        }
+
+        .education-item img {
+            margin-left: 0;
+            width: 100px;
+            height: auto;
+            margin-right: 10px; /* The spacing between pictures and texts */
+        }
+
+        .education-item .text {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 1em;
+            text-align: left;
+            margin-left: 20px;
+            max-width: 100%;
+        }
+
+        .education-item .text strong {
+            font-weight: bold;
+        }
+
+        .education-item .text em {
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- 侧边栏 -->
+    <!-- sidebar -->
     <div class="sidebar">
         <img src="Senyi.jpg" alt="Profile Picture">
         <h1>Senyi Zhang</h1>
         <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
-        <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white">aseng031619 [at] gmail [dot] com</a>
+        <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white; border-bottom: none">aseng031619 [at] gmail [dot] com</a>
         <div class="social-icons">
-            <a href="https://x.com/TiphaPo66461" target="_blank">
+            <a href="https://x.com/TiphaPo66461" style="border-bottom: none" target="_blank">
                 <img src="icons8-x-100.png" alt="X">
             </a>
-            <a href="https://github.com/Senyi-Zhang" target="_blank">
+            <a href="https://github.com/Senyi-Zhang" style="border-bottom: none" target="_blank">
                 <img src="icons8-github-100.png" alt="Github">
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61565544955776" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61565544955776" style="border-bottom: none" target="_blank">
                 <img src="icons8-facebook-100.png" alt="Facebook">
             </a>
         </div>
     </div>
 
-    <!-- 顶部导航 -->
+    <!-- top-nav -->
     <div class="top-nav">
-        <a href="index.html">Home</a>
-        <a>|</a>
-        <a href="about.html">About</a>
-        <a>|</a>
-        <a href="posts.html">Posts</a>
+        <a href="index.html" style="border-bottom: none">Home</a>
+        <a style="border-bottom: none">|</a>
+        <a href="about.html" style="border-bottom: none">About</a>
+        <a style="border-bottom: none">|</a>
+        <a href="posts.html" style="border-bottom: none">Posts</a>
     </div>
 
-    <!-- 页面内容 -->
+    <!-- content -->
     <div class="content">
+        <h2 style="margin-top: 5%">About</h2>
+        <p>😀This is my about page👋</p>
+        <p>Besides my research, I'm also interested in various development fields in the industry😉.
+            I've acquired some skills in AI, web and game development. If anyone wants to work with me on
+            a project, it's sincerely welcomed🙂!</p>
+
 
     </div>
 
-    <!-- 底部版权栏 -->
+    <!-- footer -->
     <div class="footer">
         © 2024 Senyi Zhang. All rights reserved.
     </div>
