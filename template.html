@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Personal Website</title>
+    <style>
+
+        /* 设置全局样式 */
+        body {
+            font-size: 1rem;
+            font-family: Raleway, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 页面最小高度为视口高度 */
+            margin: 0;
+        }
+
+        .content {
+            flex-grow: 1; /* 主体内容占据页面的剩余空间 */
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-image: url('default-sidebar.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            width: 25%;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1%;
+        }
+
+        .social-icons {
+            margin-top: 15%;
+            display: flex;
+            gap: 5%;
+        }
+
+        .social-icons img {
+            width: 5%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .sidebar img {
+            border-radius: 50%;
+            width: 50%;
+            max-width: 150px;
+            height: auto;
+            margin-top: 25%;
+            margin-bottom: 20%;
+        }
+
+        .top-nav {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 10px;
+            z-index: 1000;
+            font-size: 1.5rem;
+            color: black;
+            display: flex;
+            gap: 100px;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .top-nav a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <img src="Senyi.jpg" alt="Profile Picture">
+        <h1>Senyi Zhang</h1>
+        <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
+        <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white">aseng031619 [at] gmail [dot] com</a>
+        <div class="social-icons">
+            <a href="https://x.com/TiphaPo66461" target="_blank">
+                <img src="icons8-x-100.png" alt="X">
+            </a>
+            <a href="https://github.com/Senyi-Zhang" target="_blank">
+                <img src="icons8-github-100.png" alt="Github">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565544955776" target="_blank">
+                <img src="icons8-facebook-100.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <a href="index.html">Home</a>
+        <a>|</a>
+        <a href="about.html">About</a>
+        <a>|</a>
+        <a href="posts.html">Posts</a>
+    </div>
+
+    <!-- 页面内容 -->
+    <div class="content">
+
+    </div>
+
+    <!-- 底部版权栏 -->
+    <div class="footer">
+        © 2024 Senyi Zhang. All rights reserved.
+    </div>
+
+</body>
+</html>
