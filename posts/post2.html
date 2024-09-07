@@ -80,18 +80,6 @@
         }
 
 
-        .award {
-            display: block;
-            font-weight: 400;
-            font-size: 1em;
-            margin-left: 42%;
-            margin-bottom: 15px;
-            line-height: 1.7em;
-            text-align: justify;
-            max-width: 43%;
-            font-family: Arial, sans-serif;
-        }
-
         .footer {
             background-color: #333;
             color: white;
@@ -107,7 +95,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            background-image: url('images/default-sidebar.jpg');
+            background-image: url('../images/default-sidebar.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -155,6 +143,7 @@
             display: flex;
             justify-content: center; /* 居中对齐内部内容 */
             gap: 6vw;
+
         }
 
         .top-nav a {
@@ -166,42 +155,6 @@
             color: #007BFF;
         }
 
-        /* education design */
-        .education-section {
-            margin-left: 43%;
-            margin-top: 40px;
-            max-width: 100%;
-        }
-
-        .education-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px; /* The spacing between each educational experience entry */
-        }
-
-        .education-item img {
-            margin-left: 0;
-            width: 100px;
-            height: auto;
-            margin-right: 10px; /* The spacing between pictures and texts */
-        }
-
-        .education-item .text {
-            font-family: Arial, sans-serif;
-            color: #333;
-            font-size: 1em;
-            text-align: left;
-            margin-left: 20px;
-            max-width: 100%;
-        }
-
-        .education-item .text strong {
-            font-weight: bold;
-        }
-
-        .education-item .text em {
-            font-style: italic;
-        }
 
         @media (max-width: 768px) {
 
@@ -255,23 +208,6 @@
         }
 
 
-            .education-section {
-                margin-left: 0;
-                max-width: 100%;
-            }
-
-            .education-item img {
-                width: 80px;
-            }
-
-            .education-item .text {
-            font-family: Arial, sans-serif;
-            color: #333;
-            font-size: 1em;
-            text-align: left;
-            margin-left: 20px;
-            max-width: 100%;
-            }
 
             .top-nav {
                 position: sticky;
@@ -296,18 +232,6 @@
                 text-align: center;
             }
 
-            .award {
-            display: block;
-            font-weight: 400;
-            font-size: 1em;
-            margin-left: 0;
-            margin-bottom: 15px;
-            line-height: 1.7em;
-            text-align: center;
-            max-width: 100%;
-            font-family: Arial, sans-serif;
-            }
-
             .content img {
             display: block;
             margin-left: 0; /* 图片与文字对齐 */
@@ -325,47 +249,48 @@
 
     <!-- sidebar -->
     <div class="sidebar">
-        <img src="images/Senyi.jpg" alt="Profile Picture">
+        <img src="../images/Senyi.jpg" alt="Profile Picture">
         <h1>Senyi Zhang</h1>
         <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
         <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white; border-bottom: none">aseng031619 [at] gmail [dot] com</a>
         <div class="social-icons">
             <a href="https://x.com/TiphaPo66461" style="border-bottom: none" target="_blank">
-                <img src="images/icons8-x-100.png" alt="X">
+                <img src="../images/icons8-x-100.png" alt="X">
             </a>
             <a href="https://github.com/Senyi-Zhang" style="border-bottom: none" target="_blank">
-                <img src="images/icons8-github-100.png" alt="Github">
+                <img src="../images/icons8-github-100.png" alt="Github">
             </a>
             <a href="https://www.facebook.com/profile.php?id=61565544955776" style="border-bottom: none" target="_blank">
-                <img src="images/icons8-facebook-100.png" alt="Facebook">
+                <img src="../images/icons8-facebook-100.png" alt="Facebook">
             </a>
         </div>
     </div>
 
     <!-- top-nav -->
     <div class="top-nav">
-        <a href="index.html" style="border-bottom: none">Home</a>
+        <a href="../index.html" style="border-bottom: none">Home</a>
         <a style="border-bottom: none">|</a>
-        <a href="about.html" style="border-bottom: none">About</a>
+        <a href="../about.html" style="border-bottom: none">About</a>
         <a style="border-bottom: none">|</a>
-        <a href="posts.html" style="border-bottom: none">Posts</a>
+        <a href="../posts.html" style="border-bottom: none">Posts</a>
     </div>
 
     <!-- content -->
     <div class="content">
-        <h2 style="margin-top: 5%">Posts</h2>
-        <p>News and things to share : ).</p>
-        <a href="posts/post2.html" style="border-bottom: none">
-            <h3>New domain name: senyizhang.com</h3>
-        </a>
-        <p>Published at September 7, 2024, 17:35 CST</p>
-        <a href="posts/post1.html" style="border-bottom: none">
-            <h3>Personal webpage built!</h3>
-        </a>
-        <p>Published at September 6, 2024, 14:30 CST</p>
+        <h2 style="margin-top: 5%">New domain name: senyizhang.com</h2>
 
-        <img src="posts/post1.png" alt="Description of image" class="content-image" href="posts/post1.html">
-
+        <p style="color: gray">Published at September 7, 2024, 17:35 CST</p>
+        <p>
+            Although it's ok to let Github run my website, I don't think it's 'cool' enough: ). So I registered
+            domain name senyizhang.com this morning ($10 each year, acceptable for a .com domain) and arranged
+            the cloud server. It's good news that Cloudflare provides free services for websites that don't
+            update frequently and have low data transfer volume while Alibaba and Tencent charge hundreds or
+            thousands of yuan each year. The arranging process was quite easy. Just authorizing Cloudflare to
+            visit the Github repository and the website will be online within a few hours.
+        </p>
+        <p>
+        <a href="../posts.html" style="font-size: 1.1em">Return</a>
+        </p>
 
 
     </div>
