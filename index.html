@@ -49,6 +49,13 @@
             margin-top: 40px;
         }
 
+        .content h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            margin-left: 42%;
+            margin-top: 40px;
+        }
+
         .content p {
             display: block;
             font-weight: 400;
@@ -298,6 +305,9 @@
         <h1>Senyi Zhang</h1>
         <p>Undergraduate in School of Computer Science and Engineering, Sun Yat-sen University</p>
         <a href="mailto:asengo031619[at]gmail[dot]com" style="color: white; border-bottom: none">aseng031619 [at] gmail [dot] com</a>
+        <p style="margin-top:8px">
+  <a href="https://drive.google.com/file/d/1PnI-tg6aW5yUC7TeiXa0KgEXdq8vJggP/view?usp=sharing" target="_blank" rel="noopener" style="color:white;border-bottom:1px dotted #fff">CV</a>
+        </p>
         <div class="social-icons">
             <a href="https://x.com/TiphaPo66461" style="border-bottom: none" target="_blank">
                 <img src="images/icons8-x-100.png" alt="X">
@@ -324,11 +334,22 @@
     <div class="content">
         <h2 style="margin-top: 7%">Biography</h2>
         <p>Hi,</p>
-        <p>I'm a third-year undergraduate at the School of <a href="https://cse.sysu.edu.cn/" target="_blank">Computer Science and Engineering</a>, <a href="https://www.sysu.edu.cn/" target="_blank">Sun Yat-sen University</a>. I work with <a href="https://scholar.google.com/citations?hl=en-US&user=Hsff1lcAAAAJ" target="_blank">Zhi Zhou</a> and collaborate with <a href="https://users.umiacs.umd.edu/~jbg/" target="_blank">Jordan Boyd-Graber</a> from the <a href="https://umd.edu/" target="_blank">University of Maryland, College Park</a>. My research interests are broadly in Human-interactable NLP and ML system. <a href="/about" title="Get to know me better">Get to know me better</a>.</p>
+        <p>I'm a fourth-year undergraduate at the School of <a href="https://cse.sysu.edu.cn/" target="_blank">Computer Science and Engineering</a>, <a href="https://www.sysu.edu.cn/" target="_blank">Sun Yat-sen University</a>. I previously studied from <a href="https://scholar.google.com/citations?hl=en-US&user=Hsff1lcAAAAJ" target="_blank">Zhi Zhou</a> and since last summer I've been collaborating with <a href="https://users.umiacs.umd.edu/~jbg/" target="_blank">Jordan Boyd-Graber</a> from the <a href="https://umd.edu/" target="_blank">University of Maryland, College Park</a>. Since this June, I've been actively working with <a href="https://pike.psu.edu/dongwon/" target="_blank">Dongwon Lee</a> from <a href="https://www.psu.edu/" target="_blank">The Pennsylvania State University</a> and <a href="https://sites.google.com/view/delvincezhang" target="_blank">Ce Zhang</a> from <a href="https://sheffield.ac.uk/" target="_blank"> University of Sheffield</a><br><br>
+            <b> Research Interest</b> My research interests mainly focus on the application of information retrieval and retrieval-augmented large language models, especially in real-world tasks such as fact verification and question answering. <a href="/about" title="Get to know me better">Get to know me better</a>.</p>
 
-        <h2>My Recent work</h2>
-        <p>We are currently designing an AI participant for the <a href="https://www.dropout.tv/um-actually" class="underline" >'Um, Actually' web show</a>'. It needs to follow along with the host's reading, detect factual errors in the statements in real time, and provide corrections. Additionally, it must decide whether to trust its own answers. We are also developing a system to automatically evaluate the correctness of both the AI and players' answers. This project mainly focuses on fact checking, large-model enhancement, confidence issues with large models, and sentence matching tasks. If you're interested in this project, feel free to <a href="mailto:aseng031619@gmail.com" class="underline">contact me</a> for a demo.</p>
+        <h2>Research</h2>
+        <p><h3>DIVER: progressive real-time fact verification system under partial information</h3> </p>
 
+        <p><b>You can view a demonstration of DIVER [<a href="https://diverfact.live" target="_blank">here</a>].<br></b>Since last summer, under the supervision of Prof. Jordan Boyd-Graber, I have been leading the development of a progressive real-time fact verification system under partial information, which also serves as the AI participant in the online fact-checking show "Um, Actually". The system is designed to continuously process incoming information—whether from television hosts, live conversations, or other real-time sources—and perform immediate information retrieval and fact verification. Remarkably, it can even interrupt a speaker the moment it detects a factual error.<br><br>
+
+            To achieve this, we designed iterative sub-claim extraction, dynamic multi-hop adaptive query generation, and efficient, low-cost evidence filtering methods. This resulted in the first progressive real-time fact verification system under partial information, <b>DIVER (Dynamic and Iterative Fact VERification)</b>. Our first paper based on this work has been completed and submitted to ACL Rolling Review. <b>You can view a demonstration of DIVER [<a href="https://diverfact.live" target="_blank">here</a>].<br></b>
+
+        <p><h3>Multi-hop Table Fact Verification with Semantic Tree Reasoning and Retrieval</h3> </p>
+        <p>Since June 2025, I have been working under the supervision of Prof. Dongwon Lee and Prof. Ce Zhang on table-based fact verification. Our project addresses two relatively unexplored challenges in this domain: <b>table retrieval for fact verification and multi-table, multi-hop fact verification.</b>
+
+<br><br>To this end, we constructed a new multi-hop table fact verification dataset based on OTT-QA, covering two-hop, three-hop, and four-hop reasoning. The dataset further categorizes hops into six relation types (parallel, chain, aggregation, etc.). Building on BM25, we developed a retrieval method specifically tailored for fact verification, which outperforms semantic-based retrievers such as SentenceBERT on our dataset.
+
+<br><br>To better handle multi-hop structures and strengthen local retrieval and reasoning, we designed a <b>semantic-tree reasoning framework</b> that integrates semantic trees with large language models. Currently, this approach achieved an accuracy of <b>87.8% on standard single-hop benchmark TabFact (near state-of-the-art)</b> and has already surpassed traditional models in preliminary experiments on our multi-hop dataset.</p>
         <h2>Education</h2>
         <div class="education-section">
             <div class="education-item">
@@ -343,9 +364,13 @@
                     <p class="text"><strong>May. 2024 - present</strong>, Computer Science Department, <em>University of Maryland, College Park</em>,<br>Research Assistant and Visiting Student.</p>
                 </div>
             </div>
+            <div class="education-item">
+                <img src="images/psu.jpg" alt="The Pennsylvania State University">
+                <div class="text">
+                    <p class="text"><strong>June. 2025 - present</strong>, College of Information Sciences and Technology, <em>The Pennsylvania State University</em>,<br>Research Assistant and Visiting Student.</p>
+                </div>
+            </div>
         </div>
-        <h2>Publications</h2>
-        <p>Currently, there are no publications, but stay tuned — they’re coming soon!</p>
         <h2>Awards</h2>
         <div class="award">
             <li><strong>SYSU Second Class Scholarship(2023 Fall)</strong>
